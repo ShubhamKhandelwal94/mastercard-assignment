@@ -1,0 +1,61 @@
+<button mat-raised-button (click)="newRow()">Add </button>
+<button mat-raised-button *ngIf="showAction" (click)="saveProductDetail()">Save </button>
+<button mat-raised-button *ngIf="showAction" (click)="cancel()">Cancel </button>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <!-- Product Column -->
+    <ng-container matColumnDef="product">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
+        <td mat-cell *matCellDef="let element">
+            <div *ngIf="!element.editMode"> {{element.name}} </div>
+            <div *ngIf=element.editMode>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" >
+                        <textarea matInput id="productName" placeholder="Name" (input)="productName = $event.target.value"></textarea>
+                    </mat-form-field>
+                </form>
+            </div>
+        </td>
+    </ng-container>
+
+    <!-- Subcategory Column -->
+    <ng-container matColumnDef="subcategory">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Subcategory </th>
+        <td mat-cell *matCellDef="let element">
+            <div *ngIf="!element.editMode"> {{element.subcategory_name}} </div>
+            <div *ngIf="element.editMode">
+                <form>
+                    <mat-form-field appearance="fill">
+                        <select matNativeControl (change)="onOptionsSelectedSubcategory($event)" (ngModel)="selectedSubcategory">
+                            <option selected disabled>Select Subcategory</option>
+                            <option *ngFor="let subcategory of subcategories" [value]="subcategory.id"> {{subcategory.name}}</option>
+                        </select>
+                    </mat-form-field>
+                </form>
+            </div>
+        </td>
+    </ng-container>
+
+    <!-- Category Column -->
+    <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+        <td mat-cell *matCellDef="let element">
+            <div *ngIf="!element.editMode"> {{element.category_name}} </div>
+            <div *ngIf="element.editMode">
+                <form>
+                    <mat-form-field appearance="fill">
+                        <select matNativeControl (change)="onOptionsSelectedCategory($event)" (ngModel)="selectedCategory">
+                            <option selected disabled>Select Category</option>
+                            <option *ngFor="let category of categories" [value]="category.id"> {{category.name}}</option>
+                        </select>
+                    </mat-form-field>
+                </form>
+            </div>
+        </td>
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

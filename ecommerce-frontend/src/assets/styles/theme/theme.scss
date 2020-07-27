@@ -1,0 +1,15 @@
+@import "./themes/app-theme.scss";
+@import "./theme-components.scss";
+
+$default-success-palette: mat-palette($mat-green);
+$default-attention-palette: mat-palette($mat-yellow);
+
+@mixin apply-theme($theme-name: "app", $theme: $app-theme) {
+  .app-theme {
+    @include angular-material-theme($theme);
+    @include app-components-theme($theme);
+  }
+}
+
+@include mat-core();
+@include apply-theme("app", $app-theme);

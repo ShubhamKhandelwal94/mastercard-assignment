@@ -1,0 +1,37 @@
+@import "~@angular/material/theming";
+
+@function build-theme(
+  $primary-palette,
+  $accent-palette,
+  $warn-palette: null,
+  $attention-palette: null,
+  $success-palette: null,
+  $isDark: true
+) {
+  $theme: null;
+  @if ($isDark) {
+    $theme: mat-dark-theme($primary-palette, $accent-palette, $warn-palette);
+    $background-palette: map-get($theme, background);
+    $background-palette: map-merge(
+      $background-palette,
+      (
+        background: #000
+      )
+    );
+    $theme: map-merge(
+      $theme,
+      (
+        background: $background-palette
+      )
+    );
+  } @else {
+    $theme: mat-light-theme($primary-palette, $accent-palette, $warn-palette);
+  }
+  @return map-merge(
+    $theme,
+    (
+      attention: $attention-palette,
+      success: $success-palette
+    )
+  );
+}

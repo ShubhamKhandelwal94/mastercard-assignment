@@ -1,0 +1,7 @@
+@import "~@angular/material/theming";
+
+@mixin my-app-home-component-theme($theme) {
+	app-home {
+		color: mat-color(map-get($theme, warn), 900);
+  }
+}

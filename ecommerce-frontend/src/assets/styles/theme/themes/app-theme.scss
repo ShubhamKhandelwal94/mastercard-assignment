@@ -1,0 +1,181 @@
+@import "~@angular/material/theming";
+@import "../theme-functions.scss";
+
+$app-primary-colors: (
+  50: #e2e4e6,
+  100: #b6bcc0,
+  200: #868f96,
+  300: #56626c,
+  400: #31414d,
+  500: #0d1f2d,
+  600: #0b1b28,
+  700: #091722,
+  800: #07121c,
+  900: #030a11,
+  A100: #529cff,
+  A200: #1f7fff,
+  A400: #0065eb,
+  A700: #005ad2,
+  contrast: (
+    50: #fff,
+    100: #fff,
+    200: #fff,
+    300: #fff,
+    400: #fff,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$app-accent-colors: (
+  50: #ebfaff,
+  100: #ccf3ff,
+  200: #abecff,
+  300: #89e4ff,
+  400: #6fdeff,
+  500: #56d8ff,
+  600: #4fd4ff,
+  700: #45ceff,
+  800: #3cc8ff,
+  900: #2bbfff,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #d8f2ff,
+  A700: #beeaff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$app-warn-colors: (
+  50: #fbe8e7,
+  100: #f5c5c2,
+  200: #ee9e9a,
+  300: #e77771,
+  400: #e15952,
+  500: #dc3c34,
+  600: #d8362f,
+  700: #d32e27,
+  800: #ce2721,
+  900: #c51a15,
+  A100: #fff6f6,
+  A200: #ffc4c3,
+  A400: #ff9290,
+  A700: #ff7976,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$app-attention-colors: (
+  50: #fffee3,
+  100: #fefcb9,
+  200: #fefa8b,
+  300: #fef85d,
+  400: #fdf73a,
+  500: #fdf517,
+  600: #fdf414,
+  700: #fcf211,
+  800: #fcf00d,
+  900: #fcee07,
+  A100: #ffffff,
+  A200: #fffef1,
+  A400: #fffbbe,
+  A700: #fff9a4,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$app-success-colors: (
+  50: #e4fcf0,
+  100: #bbf7da,
+  200: #8ef2c1,
+  300: #60eca8,
+  400: #3ee895,
+  500: #1ce482,
+  600: #19e17a,
+  700: #14dd6f,
+  800: #11d965,
+  900: #09d152,
+  A100: #fcfffd,
+  A200: #c9ffda,
+  A400: #96ffb7,
+  A700: #7cffa5,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$app-primary-palette: mat-palette($app-primary-colors);
+$app-accent-palette: mat-palette($app-accent-colors);
+$app-warn-palette: mat-palette($app-warn-colors);
+$app-attention-palette: mat-palette($app-attention-colors);
+$app-success-palette: mat-palette($app-success-colors);
+
+$app-theme: build-theme(
+  $app-primary-palette,
+  $app-accent-palette,
+  $app-warn-palette,
+  $app-attention-palette,
+  $app-success-palette
+);
