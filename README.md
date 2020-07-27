@@ -50,4 +50,5 @@ open Admin panel (http://127.0.0.1:8000/admin)
 Steps to start frontend services:
 1) cd ecommerce-frontend
 2) npm install or npm i
-3) npm start
+3) npm start 
+(http://localhost:4200/home)
