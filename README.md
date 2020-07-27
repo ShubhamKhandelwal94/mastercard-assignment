@@ -33,10 +33,10 @@ open Admin panel (http://127.0.0.1:8000/admin)
       - http://127.0.0.1:8000/getProductsByCategory?category=7
       
 #7 - API to get all products for a subcategory
-    * Get All products by subcategory name
+   * Get All products by subcategory name
       - http://127.0.0.1:8000/getProductsBySubcategory?subcategory=cricket
-      
-    * Get All products by subcategory id
+    
+   * Get All products by subcategory id
       - http://127.0.0.1:8000/getProductsBySubcategory?subcategory=2
       
 #8 - API to post new product under existing subcategory and category
