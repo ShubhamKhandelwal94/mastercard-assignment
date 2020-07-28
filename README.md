@@ -5,7 +5,9 @@ Steps to start backend services:
 2) virtualenv ecommerceenv
 3) source ecommerceenv/bin/activate
 4) pip3 install requirements.txt
-5) python3 manage.py runserver (server should start at http://127.0.0.1:8000/)
+5) python3 manage.py makemigrations
+6) python3 manage.py migrate
+7) python3 manage.py runserver (server should start at http://127.0.0.1:8000/)
 
 open Admin panel (http://127.0.0.1:8000/admin)
 1) python manage.py createsuperuser (can skip email address).
