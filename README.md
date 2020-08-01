@@ -4,7 +4,7 @@ Steps to start backend services:
 1) cd ecommerce-backend
 2) virtualenv ecommerceenv
 3) source ecommerceenv/bin/activate
-4) pip3 install requirements.txt
+4) pip3 install -r requirements.txt
 5) python3 manage.py makemigrations
 6) python3 manage.py migrate
 7) python3 manage.py runserver (server should start at http://127.0.0.1:8000/)
